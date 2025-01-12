@@ -1,5 +1,5 @@
 pkgs: with pkgs; {
-  inputsFrom = [ pkgs.cowsay pkgs.fortune pkgs.home-manager pkgs.nil ];
+  packages = [ pkgs.cowsay pkgs.fortune pkgs.home-manager pkgs.nil ];
   shellHook = ''
            export FLAKE=$(pwd)
            echo
