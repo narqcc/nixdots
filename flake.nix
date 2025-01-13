@@ -6,5 +6,6 @@
   outputs = { flakelight, ... }@inputs:
     flakelight ./. {
       inherit inputs;
+      nixDirAliases.nixosConfigurations = [ "hosts" ];
     };
 }

@@ -1,4 +1,4 @@
-pkgs: with pkgs; {
+pkgs: {
   packages = [ pkgs.cowsay pkgs.fortune pkgs.home-manager pkgs.nil ];
   shellHook = ''
            export FLAKE=$(pwd)
