@@ -1,6 +1,5 @@
-{ config, options, pkgs, lib, inputs, hostname, ... }:
+{ config, pkgs, lib, inputs, ... }:
 let
-  inherit (inputs) self;
   inherit (builtins) mapAttrs;
 in
 {

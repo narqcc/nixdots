@@ -1,13 +1,13 @@
-{ lib, inputs, nixpkgs, config, ... }:
+{ lib, pkgs, inputs, ... }:
 {
-  modules = [
-    "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix"
-    "${nixpkgs}/nixos/modules/installer/cd-dvd/channel.nix"
+  imports = [
+    "${pkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix"
+    "${pkgs}/nixos/modules/installer/cd-dvd/channel.nix"
     inputs.self.nixosModules.common
   ];
 
   boot = {
-    kernelPackages = nixpkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
     supportedFilesystems = lib.mkForce ["zfs" "btrfs" "reiserfs" "vfat" "f2fs" "xfs" "ntfs" "cifs"];
   };
 

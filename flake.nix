@@ -3,7 +3,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flakelight.url = "github:nix-community/flakelight";
   };
-  outputs = { flakelight, nixpkgs, ... }@inputs:
+  outputs = { flakelight, ... }@inputs:
     flakelight ./. {
+      legacyPackages = pkgs: pkgs;
     };
 }
