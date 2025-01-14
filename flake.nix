@@ -3,9 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flakelight.url = "github:nix-community/flakelight";
   };
-  outputs = { flakelight, ... }@inputs:
+  outputs = { flakelight, nixpkgs, ... }@inputs:
     flakelight ./. {
-      inherit inputs;
-      nixDirAliases.nixosConfigurations = [ "hosts" ];
     };
 }

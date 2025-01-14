@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, inputs, nixpkgs, config, ... }:
 {
   modules = [
     "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix"
@@ -6,12 +6,8 @@
     inputs.self.nixosModules.common
   ];
 
-  nixpkgs = {
-     hostPlatform = lib.mkDefault "x86_64-linux";
-  };
-
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = nixpkgs.linuxPackages_latest;
     supportedFilesystems = lib.mkForce ["zfs" "btrfs" "reiserfs" "vfat" "f2fs" "xfs" "ntfs" "cifs"];
   };
 
