@@ -1,59 +1,39 @@
 {
   "nodes": {
-    "flakelight": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
+    "mkflake": {
       "locked": {
-        "lastModified": 1736167276,
-        "narHash": "sha256-PCGqqVzrQRbXnpx8AAZpC+p5LRasN/7Qm0+dMMBvdxg=",
-        "owner": "nix-community",
-        "repo": "flakelight",
-        "rev": "68723e7589f90d087805a84497cfa76b1604934e",
+        "lastModified": 1712284878,
+        "narHash": "sha256-66dqRuL4kQw9r/xthE7RbTdaszwUZLdjwFwFloeu6NI=",
+        "owner": "jonascarpay",
+        "repo": "mkflake",
+        "rev": "eb1172a9cd34e0a42848e787fb11a673f658c9e2",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "flakelight",
+        "owner": "jonascarpay",
+        "repo": "mkflake",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1736012469,
-        "narHash": "sha256-/qlNWm/IEVVH7GfgAIyP6EsVZI6zjAx1cV5zNyrs+rI=",
+        "lastModified": 1736956546,
+        "narHash": "sha256-HVtGO5sFcXs7rIF8TZrtm2Dkqh5J5G+qsGyT6b1laDY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8f3e1f807051e32d8c95cd12b9b421623850a34d",
+        "rev": "df4f2989a8f89e14bb94d73d93d159756c7766fe",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1736657626,
-        "narHash": "sha256-FWlPMUzp0lkQBdhKlPqtQdqmp+/C+1MBiEytaYfrCTY=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "2f9e2f85cb14a46410a1399aa9ea7ecf433e422e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "flakelight": "flakelight",
-        "nixpkgs": "nixpkgs_2"
+        "mkflake": "mkflake",
+        "nixpkgs": "nixpkgs"
       }
     }
   },
