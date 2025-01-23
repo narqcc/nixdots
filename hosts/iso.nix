@@ -14,9 +14,8 @@
     isNormalUser = true;
     uid = 1117;
     extraGroups = [ "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keyFiles = [ "/persist/keystore/homes/nixos/id_nixos" ];
-    hashedPassword = lib.strings.fileContents /persist/keystore/homes/nixos/pass_nixos;
     shell = pkgs.zsh;
+    password = "nixos";
     packages = with pkgs; [ ];
   };
   users.extraUsers.root.password = "nixos";
