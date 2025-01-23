@@ -9,6 +9,8 @@
     openssh.settings.PermitRootLogin = lib.mkForce "yes";
   };
 
+  programs.zsh.enable = true;
+
   networking.hostName = "nixos";
   users.users.nixos = {
     isNormalUser = true;
