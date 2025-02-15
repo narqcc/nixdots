@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
     ../nixosModules/nixos.nix
@@ -17,9 +17,9 @@
     uid = 1117;
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.zsh;
-    password = "nixos";
-    packages = with pkgs; [ ];
+    initialPassword = "nixos";
+    packages = with pkgs; [ zsh-completions nix-zsh-completions ];
   };
-  users.extraUsers.root.password = "nixos";
+  users.extraUsers.root.openssh.authorizedKeys.keys = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLXoO7W7xOvMBZodJzigyTvak1dguwc91VpJfjoZAUj RECOVERY 02/08/2025";
 
 }
