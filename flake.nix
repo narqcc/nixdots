@@ -12,7 +12,32 @@
           modules = [
           "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix"
           "${nixpkgs}/nixos/modules/installer/cd-dvd/channel.nix"
-          ./hosts/iso.nix ];
+          ./hosts/iso.nix
+          ];
+        };
+        sippet = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./sippet
+          ];
+        };
+        morsel = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./morsel
+          ];
+        };
+        dram = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./dram
+          ];
+        };
+        crumb = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./crumb
+          ];
         };
       };
     };
