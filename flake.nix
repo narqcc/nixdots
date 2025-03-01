@@ -2,9 +2,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
     mkflake.url = "github:jonascarpay/mkflake";
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, mkflake, self }: mkflake.lib.mkflake {
+  outputs = { nixpkgs, mkflake, disko, self }: mkflake.lib.mkflake {
     topLevel = {
       nixosConfigurations = {
         iso = nixpkgs.lib.nixosSystem {
@@ -25,6 +27,7 @@
           system = "x86_64-linux";
           modules = [
             ./morsel
+            disko.nixosModules.disko
           ];
         };
         dram = nixpkgs.lib.nixosSystem {
