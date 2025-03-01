@@ -49,7 +49,7 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.cowsay pkgs.fortune pkgs.home-manager pkgs.nil ];
+          packages = [ pkgs.cowsay pkgs.fortune pkgs.home-manager pkgs.nil pkgs.nh ];
   shellHook = ''
            export FLAKE=$(pwd)
            export HISTFILE=$(pwd)/.bash_history
