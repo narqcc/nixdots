@@ -1,7 +1,7 @@
 {
   imports = [
     ../../nixosModules/nixos.nix
-    ../../nixosModules/nixpkgs.nix
+    ../../nixosModules/nixpkgs-default.nix
     ../../nixosModules/services/efi-boot.nix
     ../../nixosModules/services/openssh.nix
     ../../nixosModules/services/plasma6.nix

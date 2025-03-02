@@ -20,25 +20,25 @@
         sippet = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./sippet
+            ./hosts/sippet
           ];
         };
         morsel = nixpkgs.lib.nixosSystem {
           modules = [
-            ./morsel
+            ./hosts/morsel
             disko.nixosModules.disko
           ];
         };
         dram = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./dram
+            ./hosts/dram
           ];
         };
         crumb = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./crumb
+            ./hosts/crumb
           ];
         };
       };
