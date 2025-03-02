@@ -8,5 +8,7 @@
     ./fs.nix
     ./hw.nix
     ./net.nix
+    ../../users/narqcc
+    ../../users/nannyjo
   ];
 }
