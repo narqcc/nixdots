@@ -9,8 +9,10 @@
     networkmanager.enable = true;
   };
 
-  hostKeys = [{
-    path = "/etc/ssh/ssh_host_rsa_key";
-    type = "ed25519";
-  }];
+  services.openssh = {
+    hostKeys = [{
+      path = "/etc/ssh/ssh_host_rsa_key";
+      type = "ed25519";
+    }];
+  };
 }
