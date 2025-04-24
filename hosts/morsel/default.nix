@@ -1,3 +1,4 @@
+{ pkgs, lib, config, ... }:
 {
   imports = [
     ../../nixosModules/nixos.nix

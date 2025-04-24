@@ -1,4 +1,4 @@
-{ lib, pkgs }:
+{ lib, pkgs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   environment.defaultPackages = lib.mkForce [];

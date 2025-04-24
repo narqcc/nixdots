@@ -9,6 +9,6 @@
   hardware.cpu.amd.updateMicrocode = true;
 
   imports = [
-    ../nixosModules/hardware/laptop/lidswitchignore.nix
+    ../../nixosModules/hardware/laptop/lidswitchignore.nix
   ];
 }
