@@ -1,7 +1,7 @@
 { lib, config, pkgs, ...}:
 {
   imports = [ 
-    ../../nixosModules/services/openssh
+    ../../nixosModules/services/openssh.nix
   ];
 
 }
