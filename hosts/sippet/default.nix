@@ -1,8 +1,8 @@
 {
   imports = [
-    ../../nixosModules/nixos
-    ../../nixosModules/nixpkgs-default
-    ../../nixosModules/hardware/efi-boot
+    ../../nixosModules/nixos.nix
+    ../../nixosModules/nixpkgs-default.nix
+    ../../nixosModules/hardware/efi-boot.nix
     ./srv.nix
     ./net.nix
     ./fs.nix
