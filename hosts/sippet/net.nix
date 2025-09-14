@@ -1,7 +1,7 @@
 { lib, config, pkgs, ...}:
 {
   imports = [
-    ../../nixosModules/services/network/boot-no-wait
+    ../../nixosModules/services/network/boot-no-wait.nix
   ];
 
   networking = {
