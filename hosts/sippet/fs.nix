@@ -3,7 +3,7 @@
 
   boot.supportedFilesystems = [ "zfs" "ntfs" ];
   boot.zfs.devNodes = "/dev/disk/by-label/sippet-os";
-  boot.zfs.extraPools = [ "sippet-m" ];
+  boot.zfs.extraPools = [ ];
   boot.initrd.postDeviceCommands = lib.mkAfter ''
     zfs rollback -r sippet-os/ephemeral/slash@blank
   '';

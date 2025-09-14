@@ -8,5 +8,6 @@
     ./net.nix
     ./fs.nix
     ./hw.nix
+    ../../users/narqcc
   ];
 }
