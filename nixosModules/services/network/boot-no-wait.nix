@@ -1,4 +1,4 @@
-{ pkgs }
+{ pkgs }:
 {
   # Don't wait for network startup
   # https://old.reddit.com/r/NixOS/comments/vdz86j/how_to_remove_boot_dependency_on_network_for_a
